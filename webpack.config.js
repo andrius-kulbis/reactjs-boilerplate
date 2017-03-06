@@ -1,15 +1,11 @@
-var webpack = require('webpack'),
-    path    = require('path');
-
-var NODE_MODULES = path.resolve(__dirname, 'node_modules');
-var BUILD_PATH   = path.resolve(__dirname, 'public', 'build');
-var INDEX_PATH   = path.resolve(__dirname, 'src', 'index.js');
+var webpack      = require('webpack'),
+    path         = require('path'),
+    NODE_MODULES = path.resolve(__dirname, 'node_modules'),
+    BUILD_PATH   = path.resolve(__dirname, 'public', 'build'),
+    INDEX_PATH   = path.resolve(__dirname, 'src', 'index.js');
 
 module.exports = {
-    devtool: 'eval',
     entry: [
-        'webpack/hot/dev-server',
-        'webpack-dev-server/client?http://localhost:8080/',
         INDEX_PATH
     ],
     output: {
